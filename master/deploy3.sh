@@ -145,7 +145,7 @@ mv metricbeat.yml metricbeat.yml.orig
 echo 'Done'
 
 echo '3- Load metricbeat config file from Github********************'
-curl -O https://raw.githubusercontent.com/hyscham/terraform/master/metricbeat.yml
+curl -O https://raw.githubusercontent.com/the-ac/terraform/master/master/metricbeat.yml
 echo 'Done'
 
 echo '4- Change metricbeat folder permissions to efk user*********' 
@@ -166,7 +166,7 @@ sudo systemctl restart rsyslog
 
 cd /etc/td-agent
 sudo mv td-agent.conf td-agent.conf.orig
-sudo curl -O https://raw.githubusercontent.com/hyscham/terraform/master/td-agent.conf
+sudo curl -O https://raw.githubusercontent.com/the-ac/terraform/master/master/td-agent.conf
 sudo systemctl restart td-agent
 echo '*********************************** End FlentD config ********************************************'
 
