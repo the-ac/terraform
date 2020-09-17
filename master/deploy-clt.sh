@@ -50,7 +50,7 @@ mv metricbeat.yml metricbeat.yml.orig
 
 
 echo '3- Load metricbeat config file from Github ******************'
-curl -O https://raw.githubusercontent.com/hyscham/terraform/master/metricbeat-clt.yml
+curl -O https://raw.githubusercontent.com/the-ac/terraform/master/master/metricbeat-clt.yml
 echo 'Done'
 
 echo '3-1 Rename metricbeat config file from Github **************'
@@ -72,7 +72,7 @@ sudo systemctl restart rsyslog
 
 cd /etc/td-agent
 sudo mv td-agent.conf td-agent.conf.orig
-sudo curl -O https://raw.githubusercontent.com/hyscham/terraform/master/td-agent.conf
+sudo curl -O https://raw.githubusercontent.com/the-ac/terraform/master/master/td-agent.conf
 
 sudo systemctl restart td-agent
 echo '*********************************** End FlentD config ********************************************'
@@ -82,7 +82,7 @@ echo '*********************************** End FlentD config ********************
 
 echo '***************************         Start MetricBeat    ****************************************'
 cd /home/efk/deploy/metricbeat
-sudo curl -O  https://raw.githubusercontent.com/hyscham/terraform/master/metricbeat_autostarter.sh
+sudo curl -O https://raw.githubusercontent.com/the-ac/terraform/master/master/metricbeat_autostarter.sh
 chown -R efk /home/efk/deploy/metricbeat
 sudo chmod 777 metricbeat_autostarter.sh
 su efk -c "./metricbeat_autostarter.sh &"
