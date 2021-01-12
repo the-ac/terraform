@@ -7,6 +7,8 @@ echo '**************************** By am.chamkha@gmail.com ******'
 
 echo '**************  Create efk user without password  ***********'
 sudo useradd -m efk
+echo 'add user efk to sudoers:'
+sudo usermod –aG wheel efk
 echo 'Done'
 echo '*************************************************************'
 
