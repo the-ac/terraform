@@ -1,13 +1,14 @@
 echo '*********************** Centos 7.5 *************************'
 echo 'Config rsyslog, td-agent et metricbeat on Cloud VM..........'
-echo '**************************** By h.ennakouch@gmail.com ******'
-
+echo '**************************** By am.chamkha@gmail.com ******'
 
 
 
 echo '**************  Create efk user without password  ***********'
 sudo useradd -m efk
 echo 'Done'
+echo 'add user efk to sudoers:'
+sudo usermod –aG wheel efk
 echo '*************************************************************'
 
 
